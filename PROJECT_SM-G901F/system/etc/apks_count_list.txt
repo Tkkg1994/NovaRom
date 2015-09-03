@@ -9,9 +9,9 @@
 /system/app/LegacyInCallUI/LegacyInCallUI.apk
 /system/app/Music2/Music2.apk
 /system/app/SamsungIME/SamsungIME.apk
-/system/app/SBrowser/SBrowser.apk
 /system/app/Chrome/Chrome.apk
 /system/app/Hangouts/Hangouts.apk
+/system/app/SBrowser/SBrowser.apk
 /system/app/SPlanner_OS_UPG/SPlanner_OS_UPG.apk
 /system/app/YouTube/YouTube.apk
 /system/app/SamsungCamera3/SamsungCamera3.apk
