@@ -13,8 +13,6 @@ ui_print("Remove old system");
 delete_recursive("/system");
 ui_print("Install the rom");
 package_extract_dir("system", "/system");
-ui_print("Copy some new apps");
-package_extract_dir("data", "/data");
 ui_print("Generating Symlinks");
 symlink("app_process32", "/system/bin/app_process");
 symlink("dalvikvm32", "/system/bin/dalvikvm");
