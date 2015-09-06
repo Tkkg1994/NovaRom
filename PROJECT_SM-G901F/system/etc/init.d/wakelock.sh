@@ -1,8 +1,5 @@
 #!/system/bin/sh
 #
-# Copyright (c) 2015 Javier Sayago <admin@lonasdigital.com>
-# Contact: javilonas@esp-desarrolladores.com
-#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -16,10 +13,7 @@
 # limitations under the License.
 #
 
-PATH=/sbin:/system/sbin:/system/bin:/system/xbin
-export PATH
-
-# Inicio
+# Initial
 mount -o remount,rw -t auto /
 mount -t rootfs -o remount,rw rootfs
 mount -o remount,rw -t auto /system
