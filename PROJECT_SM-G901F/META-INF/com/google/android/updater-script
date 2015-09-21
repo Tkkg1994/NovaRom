@@ -3,7 +3,6 @@ ui_print("Installing NovaRom V1.3");
 ui_print("");
 ui_print("Mount partitions");
 ui_print("Mounting System");
-ui_print("Mounting System");
 mount("ext4", "EMMC", "/dev/block/mmcblk0p24", "/system");
 ui_print("Mounting Data");
 mount("ext4", "EMMC", "/dev/block/mmcblk0p27", "/data");
