@@ -17,6 +17,6 @@
     <CscFeature_Setting_EnableEditingIpVersionType>TRUE</CscFeature_Setting_EnableEditingIpVersionType>
     <CscFeature_Message_UserAgent>SAMSUNG-ANDROID-MMS/SM-G901F</CscFeature_Message_UserAgent>
     <CscFeature_Message_UaProfUrl>http://wap.samsungmobile.com/uaprof/SM-G901F.xml</CscFeature_Message_UaProfUrl>
-   
+    <CscFeature_Setting_EnableMenuBlockCallMsg>TRUE</CscFeature_Setting_EnableMenuBlockCallMsg>
   </FeatureSet>
 </SamsungMobileFeauture>
