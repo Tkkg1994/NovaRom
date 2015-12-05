@@ -1,5 +1,5 @@
 ui_print("");
-ui_print("Installing NovaRom V1.3.9");
+ui_print("Installing NovaRom V1.4");
 ui_print("");
 ui_print("Mount partitions");
 ui_print("Mounting System");
@@ -234,10 +234,7 @@ ui_print("Flash latest SuperSU");
 package_extract_dir("supersu", "/tmp/supersu");
 run_program("/sbin/busybox", "unzip", "/tmp/supersu/supersu.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
 run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/supersu.zip");
-ui_print("Flash Xposed V6");
-package_extract_dir("xposed", "/temp/xposed");
-run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
-run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed.zip");
+ui_print("Install Xposed V7");
 ui_print("Flash Stock Kernel");
 package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
 ui_print("Flash Modem");
