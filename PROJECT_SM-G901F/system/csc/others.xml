@@ -18,5 +18,11 @@
     <CscFeature_Message_UserAgent>SAMSUNG-ANDROID-MMS/SM-G901F</CscFeature_Message_UserAgent>
     <CscFeature_Message_UaProfUrl>http://wap.samsungmobile.com/uaprof/SM-G901F.xml</CscFeature_Message_UaProfUrl>
     <CscFeature_Setting_EnableMenuBlockCallMsg>TRUE</CscFeature_Setting_EnableMenuBlockCallMsg>
+    <CscFeature_Message_SmsToMmsTextThreshold>999</CscFeature_Message_SmsToMmsTextThreshold>
+    <CscFeature_Message_SmsMaxByte>999</CscFeature_Message_SmsMaxByte>
+    <CscFeature_Camera_EnableCameraDuringCall>TRUE</CscFeature_Camera_EnableCameraDuringCall>
+    <CscFeature_Camera_ShutterSoundMenu>TRUE</CscFeature_Camera_ShutterSoundMenu>
+    <CscFeature_Contact_EnableCallButtonInList>TRUE</CscFeature_Contact_EnableCallButtonInList>
+    <CscFeature_VoiceCall_ConfigRecording>RecordingAllowed</CscFeature_VoiceCall_ConfigRecording>
   </FeatureSet>
 </SamsungMobileFeauture>
