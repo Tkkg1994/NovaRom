@@ -1,12 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <CustomerData>
   <GeneralInfo>
-    <CSCEdition>ED0005</CSCEdition>
+    <CSCEdition>ED0007</CSCEdition>
     <Country>Nordic</Country>
     <CountryISO>SE</CountryISO>
     <Region>EUR</Region>
     <SalesCode>NEE</SalesCode>
-    <NbNetworkInfo>40</NbNetworkInfo>
+    <NbNetworkInfo>42</NbNetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>90112</MCCMNC>
+      <NetworkName>MCP</NetworkName>
+    </NetworkInfo>
     <NetworkInfo>
       <MCCMNC>24414</MCCMNC>
       <NetworkName>Ålcom</NetworkName>
@@ -175,12 +179,17 @@
     </NetworkInfo>
     <NetworkInfo>
       <MCCMNC>24201</MCCMNC>
-      <NetworkName>Ventelo</NetworkName>
+      <NetworkName>Phonero</NetworkName>
       <SPCode>700</SPCode>
     </NetworkInfo>
     <NetworkInfo>
       <MCCMNC>27412</MCCMNC>
       <NetworkName>Tal</NetworkName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>22201</MCCMNC>
+      <NetworkName>Nova</NetworkName>
+      <SPName>NOVA</SPName>
     </NetworkInfo>
   </GeneralInfo>
   <Settings>
@@ -330,7 +339,14 @@
         <URL>http://www.samsung.com/m-manual/common</URL>
       </eManual>
     </Browser>
-    <NbWifiProfile>1</NbWifiProfile>
+    <NbWifiProfile>2</NbWifiProfile>
+    <WifiProfile>
+      <NetworkName>S Telia</NetworkName>
+      <WifiSSID>Telia wifi1x</WifiSSID>
+      <WifiKeyMgmt>WPA-EAP IEEE8021X</WifiKeyMgmt>
+      <WifiEAPMethod>sim</WifiEAPMethod>
+      <WifiPriority>1</WifiPriority>
+    </WifiProfile>
     <WifiProfile>
       <NetworkName>S Telia</NetworkName>
       <WifiSSID>homerun1x</WifiSSID>
@@ -339,7 +355,7 @@
       <WifiPriority>1</WifiPriority>
     </WifiProfile>
     <Connections>
-      <NbProfileHandle>34</NbProfileHandle>
+      <NbProfileHandle>35</NbProfileHandle>
       <ProfileHandle>
         <NbNetProfile>2</NbNetProfile>
         <NetworkName>Ålcom</NetworkName>
@@ -534,9 +550,9 @@
       </ProfileHandle>
       <ProfileHandle>
         <NbNetProfile>2</NbNetProfile>
-        <NetworkName>Ventelo</NetworkName>
-        <ProfBrowser>Ventelo Internett</ProfBrowser>
-        <ProfMMS>Ventelo MMS</ProfMMS>
+        <NetworkName>Phonero</NetworkName>
+        <ProfBrowser>Phonero Internett</ProfBrowser>
+        <ProfMMS>Phonero MMS</ProfMMS>
       </ProfileHandle>
       <ProfileHandle>
         <NbNetProfile>2</NbNetProfile>
@@ -544,12 +560,26 @@
         <ProfBrowser>Tal Internet</ProfBrowser>
         <ProfMMS>Tal MMS</ProfMMS>
       </ProfileHandle>
-      <NbProfile>68</NbProfile>
+      <ProfileHandle>
+        <NbNetProfile>1</NbNetProfile>
+        <NetworkName>MCP</NetworkName>
+        <ProfBrowser>internet</ProfBrowser>
+      </ProfileHandle>
+      <NbProfile>69</NbProfile>
+      <Profile>
+        <NetworkName>MCP</NetworkName>
+        <Editable>yes</Editable>
+        <ProfileName>internet</ProfileName>
+        <Protocol>http</Protocol>
+        <MTUSize>1500</MTUSize>
+        <PSparam>
+          <APN>internet</APN>
+        </PSparam>
+      </Profile>
       <Profile>
         <NetworkName>Ålcom</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Ålcom Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -581,7 +611,6 @@
         <NetworkName>Halebop</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Halebop Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -613,7 +642,6 @@
         <NetworkName>Halebop S</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Halebop Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -645,7 +673,6 @@
         <NetworkName>Aina (S)</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Aina Internet (S)</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -677,7 +704,6 @@
         <NetworkName>Aina (D)</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Aina Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -726,7 +752,6 @@
         <NetworkName>Spring</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Spring GPRS</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -742,7 +767,6 @@
         <IpVersion>ipv4v6</IpVersion>
         <Editable>yes</Editable>
         <ProfileName>Tele2 4G</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>none</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -775,7 +799,6 @@
         <IpVersion>ipv4v6</IpVersion>
         <Editable>yes</Editable>
         <ProfileName>DNA Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -807,7 +830,6 @@
         <NetworkName>DNA Pro</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>DNA Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -839,7 +861,6 @@
         <NetworkName>TELIA DK</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Telia SurfPort</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -871,7 +892,6 @@
         <NetworkName>CallMe &amp; DLG</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -903,7 +923,6 @@
         <NetworkName>Telenor DK</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Telenor Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -935,7 +954,6 @@
         <NetworkName>S Telia</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Telia SE WAP</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -964,7 +982,6 @@
         <NetworkName>FIN SONERA</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Sonera Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -996,7 +1013,6 @@
         <NetworkName>Telenor SE</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>TelenorMobilsurf</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1028,7 +1044,6 @@
         <NetworkName>DK TDC</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>TDC</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1057,7 +1072,6 @@
         <NetworkName>TDC Sweden</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>TDC Internet Sweden</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1089,7 +1103,6 @@
         <NetworkName>TDC Finland</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>TDC Internet Finland</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1118,7 +1131,6 @@
         <NetworkName>TDC Norway</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>TDC Internet Norway</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1151,7 +1163,6 @@
         <IpVersion>ipv4v6</IpVersion>
         <Editable>yes</Editable>
         <ProfileName>Telenor</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1181,7 +1192,6 @@
         <NetworkName>NetCom</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>NetCom Mobil</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1210,7 +1220,6 @@
         <NetworkName>Mobile Norway</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>NwN Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1239,7 +1248,6 @@
         <NetworkName>Tele2 No</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Tele2 Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1268,7 +1276,6 @@
         <NetworkName>Elisa</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Elisa Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1297,7 +1304,6 @@
         <NetworkName>Saunalahti</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Saunalahti Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1326,7 +1332,6 @@
         <NetworkName>Telmore</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Telmore Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1341,13 +1346,13 @@
         <NetworkName>Telmore</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Telmore MMS</ProfileName>
-        <URL>http://192.168.241.114:8002</URL>
+        <URL>http://mmsc.tdc.dk:8002</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
         <Proxy>
           <EnableFlag>on</EnableFlag>
-          <ServAddr>194.182.251.15</ServAddr>
+          <ServAddr>inetproxy.tdc.dk</ServAddr>
           <Port>8080</Port>
         </Proxy>
         <PSparam>
@@ -1358,7 +1363,6 @@
         <NetworkName>Vodafone Iceland</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Vodafone Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1532,7 +1536,6 @@
         <NetworkName>Tele Greenland</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Tele Internet</ProfileName>
-        <URL>http://m.samsung.com</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1544,9 +1547,9 @@
         </PSparam>
       </Profile>
       <Profile>
-        <NetworkName>Ventelo</NetworkName>
+        <NetworkName>Phonero</NetworkName>
         <Editable>yes</Editable>
-        <ProfileName>Ventelo MMS</ProfileName>
+        <ProfileName>Phonero MMS</ProfileName>
         <URL>http://mmsc/</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
@@ -1557,16 +1560,15 @@
           <Port>8080</Port>
         </Proxy>
         <PSparam>
-          <APN>mms.ventelo.no</APN>
-          <UserId>ventelo</UserId>
+          <APN>mms.phonero.no</APN>
+          <UserId>Phonero</UserId>
           <Password>1111</Password>
         </PSparam>
       </Profile>
       <Profile>
-        <NetworkName>Ventelo</NetworkName>
+        <NetworkName>Phonero</NetworkName>
         <Editable>yes</Editable>
-        <ProfileName>Ventelo Internett</ProfileName>
-        <URL>http://m.samsung.com</URL>
+        <ProfileName>Phonero Internett</ProfileName>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
@@ -1574,7 +1576,7 @@
           <EnableFlag>off</EnableFlag>
         </Proxy>
         <PSparam>
-          <APN>internet.ventelo.no</APN>
+          <APN>internet.phonero.no</APN>
         </PSparam>
       </Profile>
       <Profile>

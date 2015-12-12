@@ -10,19 +10,12 @@
     <CscFeature_Message_GalleryView4SingleImageMms>imagetext</CscFeature_Message_GalleryView4SingleImageMms>
     <CscFeature_Web_DisableMostVisitedHomepage>TRUE</CscFeature_Web_DisableMostVisitedHomepage>
     <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
-    <CscFeature_Launcher_TotalPageCount>2</CscFeature_Launcher_TotalPageCount>
+    <CscFeature_Launcher_TotalPageCount>4</CscFeature_Launcher_TotalPageCount>
     <CscFeature_Launcher_DefaultPageNumber>0</CscFeature_Launcher_DefaultPageNumber>
     <CscFeature_Message_ConfigEmojiComposing>SMSMMS</CscFeature_Message_ConfigEmojiComposing> 
     <CscFeature_Setting_IncludeApn4SwUpdate>TRUE</CscFeature_Setting_IncludeApn4SwUpdate>
     <CscFeature_Setting_EnableEditingIpVersionType>TRUE</CscFeature_Setting_EnableEditingIpVersionType>
     <CscFeature_Message_UserAgent>SAMSUNG-ANDROID-MMS/SM-G901F</CscFeature_Message_UserAgent>
-    <CscFeature_Message_UaProfUrl>http://wap.samsungmobile.com/uaprof/SM-G901F.xml</CscFeature_Message_UaProfUrl>
-    <CscFeature_Setting_EnableMenuBlockCallMsg>TRUE</CscFeature_Setting_EnableMenuBlockCallMsg>
-    <CscFeature_Message_SmsToMmsTextThreshold>999</CscFeature_Message_SmsToMmsTextThreshold>
-    <CscFeature_Message_SmsMaxByte>999</CscFeature_Message_SmsMaxByte>
-    <CscFeature_Camera_EnableCameraDuringCall>TRUE</CscFeature_Camera_EnableCameraDuringCall>
-    <CscFeature_Camera_ShutterSoundMenu>TRUE</CscFeature_Camera_ShutterSoundMenu>
-    <CscFeature_Contact_EnableCallButtonInList>TRUE</CscFeature_Contact_EnableCallButtonInList>
-    <CscFeature_VoiceCall_ConfigRecording>RecordingAllowed</CscFeature_VoiceCall_ConfigRecording>
+    <CscFeature_Message_UaProfUrl>http://wap.samsungmobile.com/uaprof/SM-G901F.xml</CscFeature_Message_UaProfUrl>    <CscFeature_RIL_CurrentPlmnIndCheck>TRUE</CscFeature_RIL_CurrentPlmnIndCheck>
   </FeatureSet>
 </SamsungMobileFeauture>
