@@ -1,5 +1,5 @@
 ui_print("");
-ui_print("Installing NovaRom V1.4");
+ui_print("Installing NovaRom V1.5 !");
 ui_print("");
 ui_print("Mount partitions");
 ui_print("Mounting System");
