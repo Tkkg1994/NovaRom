@@ -1,6 +1,9 @@
-ui_print("");
-ui_print("Installing NovaRom V1.5 !");
-ui_print("");
+if
+    file_getprop("/tmp/aroma-data/menu.prop","selected") == "1"
+     then
+
+		ui_print("Installing NovaRom V1.6!");
+
 ui_print("Mount partitions");
 ui_print("Mounting System");
 mount("ext4", "EMMC", "/dev/block/mmcblk0p24", "/system");
@@ -8,11 +11,228 @@ ui_print("Mounting Data");
 mount("ext4", "EMMC", "/dev/block/mmcblk0p27", "/data");
 ui_print("Mounting Cache");
 mount("ext4", "EMMC", "/dev/block/mmcblk0p25", "/cache");
-ui_print("Remove old system");
-delete_recursive("/system");
-ui_print("Install the rom");
+ui_print("Deleting old files");
+#-- SUB WINDOW 15
+
+if
+	file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
+     then
+    ui_print("Full wipe...");
+	delete_recursive("/system");
+	package_extract_dir("Hulk/Tools", "/tmp/Tools"); 
+	set_perm_recursive(0, 0, 0777, 0777, "/tmp/Tools");
+	set_perm(0, 0, 0777, "/tmp/Tools/DeleteDataWithoutMedia.sh");
+	run_program("/sbin/busybox", "sh", "/tmp/Tools/DeleteDataWithoutMedia.sh");
+	delete_recursive("/tmp/Tools");
+	delete_recursive("/cache");
+	delete_recursive("/data/dalvik-cache");
+endif;
+	
+if
+    file_getprop("/tmp/aroma/window1.prop","selected.1") == "2"
+     then
+    ui_print("Clean install...");
+	delete_recursive("/system");
+	delete_recursive("/data");
+	delete_recursive("/sdcard");
+	delete_recursive("/cache");
+	delete_recursive("/data/dalvik-cache");
+endif;
+
+if
+    file_getprop("/tmp/aroma/window1.prop","selected.1") == "3"
+     then
+    ui_print("Dirty flash...");
+	delete_recursive("/system");
+endif;
+
+ui_print("Installing New System");
 package_extract_dir("system", "/system");
 package_extract_dir("data", "/data");
+
+#-- SUB WINDOW 2
+
+if
+	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+		then
+    ui_print("Install some stock Kernel Files...");
+	package_extract_dir("Nova/Kernel/Stock/system", "/system");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window2.prop","selected.1") == "2"
+		then
+    ui_print("Install some modified Kernel Files...");
+	package_extract_dir("Nova/Kernel/Nova/system", "/system");
+endif;
+
+#-- SUB WINDOW 4
+
+if
+	file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
+		then
+    ui_print("Installing Stock Weather Widget...");
+	package_extract_dir("Nova/Weather/S5", "/system/app");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window4.prop","selected.1") == "2"
+		then
+    ui_print("Installing S6 Weather Widget...");
+	package_extract_dir("Nova/Weather/S6", "/system/app");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window4.prop","selected.1") == "3"
+		then
+    ui_print("Installing nothing...");
+endif;
+
+#-- SUB WINDOW 5
+
+if
+	file_getprop("/tmp/aroma/window5.prop","selected.1") == "1"
+		then
+    ui_print("Installing Stock Voice Note...");
+	package_extract_dir("Nova/Voice/S5", "/system/priv-app");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window5.prop","selected.1") == "2"
+		then
+    ui_print("Installing S6 Voice Note...");
+	package_extract_dir("Nova/Voice/S6", "/system/priv-app");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window5.prop","selected.1") == "3"
+		then
+    ui_print("Installing nothing...");
+endif;
+
+#-- SUB WINDOW 6
+
+if
+	file_getprop("/tmp/aroma/window6.prop","selected.1") == "1"
+		then
+    ui_print("Installing Stock Myfiles...");
+	package_extract_dir("Nova/Myfiles/S5", "/system/priv-app");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window6.prop","selected.1") == "2"
+		then
+    ui_print("Installing S6 Myfiles...");
+	package_extract_dir("Nova/Myfiles/S6", "/system/priv-app");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window6.prop","selected.1") == "3"
+		then
+    ui_print("Installing nothing...");
+endif;
+
+#-- SUB WINDOW 7
+
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "1"
+		then
+    ui_print("Installing Stock Launcher...");
+	package_extract_dir("Nova/Launcher/S5", "/system/priv-app");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "2"
+		then
+    ui_print("Installing S6 Launcher...");
+	package_extract_dir("Nova/Launcher/S6", "/system/priv-app");
+endif;
+
+#-- SUB WINDOW 8
+
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "1"
+		then
+    ui_print("Installing Stock SystemUI...");
+	package_extract_dir("Nova/Theme/S5", "/system/priv-app");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "2"
+		then
+    ui_print("Installing S6 SystemUI...");
+	package_extract_dir("Nova/Theme/S6", "/system/priv-app");
+endif;
+
+#-- SUB WINDOW 9
+
+if
+	file_getprop("/tmp/aroma/window9.prop","selected.1") == "1"
+		then
+    ui_print("Installing Stock Calculator...");
+	package_extract_dir("Nova/Calculator/S5", "/system");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window9.prop","selected.1") == "2"
+		then
+    ui_print("Installing S6 Calculator...");
+	package_extract_dir("Nova/Calculator/S6", "/system");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window9.prop","selected.1") == "3"
+		then
+    ui_print("Installing nothing...");
+endif;
+
+#-- SUB WINDOW 10
+
+if
+	file_getprop("/tmp/aroma/window10.prop","selected.1") == "1"
+		then
+    ui_print("Installing Stock Email...");
+	package_extract_dir("Nova/Email/S5", "/system");
+	symlink("/system/lib/libjni_emailencryption.so", "/system/app/SecEmail_K/lib/arm/libjni_emailencryption.so");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window10.prop","selected.1") == "2"
+		then
+    ui_print("Installing S6 Email...");
+	package_extract_dir("Nova/Email/S6", "/system");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window10.prop","selected.1") == "3"
+		then
+    ui_print("Installing nothing...");
+endif;
+
+#-- Xposed App
+
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
+		then
+    ui_print("Installing Xposed app...");
+	package_extract_dir("Nova/Xposed/app", "/system/app");
+endif;
+
+#-- SUB WINDOW 3
+
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
+		then
+    ui_print("Installing Xposed V75...");
+	package_extract_dir("Nova/Xposed/system", "/system");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.1") == "2"
+		then
+    ui_print("Nothing to do here...");
+endif;
+
 ui_print("Generating Symlinks");
 symlink("app_process32", "/system/bin/app_process");
 symlink("dalvikvm32", "/system/bin/dalvikvm");
@@ -24,13 +244,10 @@ symlink("libGLESv2.so", "/system/lib/libGLESv3.so");
 symlink("/persist/wlan_mac.bin", "/system/etc/firmware/wlan/qca_cld/wlan_mac.bin");
 symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
 symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");
-symlink("/system/etc/wifi/WCNSS_qcom_cfg.ini", "/system/etc/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini");
-symlink("/system/etc/wifi/WCNSS_qcom_wlan_nv.bin", "/system/etc/firmware/wlan/qca_cld/WCNSS_qcom_wlan_nv.bin");
 symlink("/system/lib/libapa_jni.so", "/system/app/SapaMonitor/lib/arm/libapa_jni.so");
 symlink("/system/lib/libbluetooth_jni.so", "/system/app/Bluetooth/lib/arm/libbluetooth_jni.so");
 symlink("/system/lib/libcommonpawrapper.so", "/system/app/RootPA/lib/arm/libcommonpawrapper.so");
 symlink("/system/lib/libdefcontainer_jni.so", "/system/priv-app/DefaultContainerService/lib/arm/libdefcontainer_jni.so");
-symlink("/system/lib/libjni_emailencryption.so", "/system/app/SecEmail_K/lib/arm/libjni_emailencryption.so");
 symlink("/system/lib/libjni_pacprocessor.so", "/system/app/PacProcessor/lib/arm/libjni_pacprocessor.so");
 symlink("/system/lib/libnfc_nci_jni.so", "/system/app/NfcNci/lib/arm/libnfc_nci_jni.so");
 symlink("/system/lib/libprintspooler_jni.so", "/system/app/SPrintSpooler/lib/arm/libprintspooler_jni.so");
@@ -43,7 +260,13 @@ symlink("/system/lib/libSLPF_transcoder_jni_kk.so", "/system/priv-app/SamsungLin
 symlink("/system/lib/libSLPF_transcoder_jni_ll.so", "/system/priv-app/SamsungLinkPlatform/lib/arm/libSLPF_transcoder_jni_ll.so");
 symlink("/system/lib/libSRIB_FocusShot.so", "/system/priv-app/OutOfFocusViewer_WQHD_K/lib/arm/libSRIB_FocusShot.so");
 symlink("/system/lib/libswiftkeysdk-java.so", "/system/app/SamsungIME/lib/arm/libswiftkeysdk-java.so");
-symlink("/system/lib/modules/qca_cld/proprietary_qca_cld_wlan.ko", "/system/lib/modules/wlan.ko");
+if
+	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+		then
+			symlink("/system/lib/modules/qca_cld/proprietary_qca_cld_wlan.ko", "/system/lib/modules/wlan.ko");
+			symlink("/system/etc/wifi/WCNSS_qcom_cfg.ini", "/system/etc/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini");
+			symlink("/system/etc/wifi/WCNSS_qcom_wlan_nv.bin", "/system/etc/firmware/wlan/qca_cld/WCNSS_qcom_wlan_nv.bin");
+endif;
 symlink("toolbox", "/system/bin/cat");
 symlink("toolbox", "/system/bin/chcon");
 symlink("toolbox", "/system/bin/chmod");
@@ -227,9 +450,23 @@ ui_print("Flash latest Gapps");
 package_extract_dir("gapps", "/temp/gapps");
 run_program("/sbin/busybox", "unzip", "/temp/gapps/open_gapps.zip", "META-INF/com/google/android/*", "-d", "/temp/gapps");
 run_program("/sbin/busybox", "sh", "/temp/gapps/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/gapps/open_gapps.zip");
-ui_print("Install Xposed V7");
-ui_print("Flash Stock Kernel");
-package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+
+#-- Kernel
+
+if
+	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+		then
+		ui_print("Flash Stock Kernel");
+		package_extract_file("Nova/Kernel/Stock/boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window2.prop","selected.1") == "2"
+		then
+		ui_print("Flash Nova-Kernel");
+		package_extract_file("Nova/Kernel/Nova/boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+endif;
+
 ui_print("Flash Modem");
 package_extract_file("modem.bin", "/dev/block/platform/msm_sdcc.1/by-name/modem");
 ui_print("Wiping Cache");
@@ -241,3 +478,7 @@ ui_print("Unmount partitions");
 unmount("/system");
 unmount("/data");
 unmount("/cache");
+
+endif;
+
+ui_print("Please Reboot now");
